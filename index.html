@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.U.K.K.A // Roblox Scripter</title>
+    <title>Alexander // Roblox Scripter</title>
     <style>
         body {
             background-color: #050505;
@@ -12,34 +12,93 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            overflow: hidden;
+            padding: 20px;
         }
         .terminal-container {
-            width: 80%;
-            max-width: 800px;
+            width: 100%;
+            max-width: 900px;
             border: 1px solid #333;
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(5, 5, 5, 0.9));
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
         }
         h1 {
             color: #ffffff;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px dashed #444;
             padding-bottom: 10px;
             font-weight: normal;
+            font-size: 1.5em;
         }
         .log-entry {
-            margin-bottom: 15px;
-            line-height: 1.5;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
-        .highlight { color: #555555; }
-        a {
+        .highlight { color: #777777; font-weight: bold; }
+        
+        /* Sistema de Nodos Visuales */
+        .visual-nodes-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .visual-node {
+            flex: 1 1 250px;
+            border: 1px solid #333;
+            background-color: #0a0a0a;
+            padding: 10px;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        .visual-node:hover {
+            border-color: #777;
+        }
+        .visual-node img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 1px solid #222;
+            margin-bottom: 10px;
+            filter: grayscale(80%) brightness(0.8);
+            transition: filter 0.3s;
+        }
+        .visual-node:hover img {
+            filter: grayscale(0%) brightness(1);
+        }
+        .node-title {
+            color: #ddd;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .node-desc {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        /* Protocolos de Interacción */
+        button.contact-btn {
+            background-color: transparent;
             color: #888888;
-            text-decoration: none;
-            border-bottom: 1px dashed #888888;
+            border: 1px dashed #888888;
+            padding: 5px 10px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s;
         }
-        a:hover { color: #ffffff; }
+        button.contact-btn:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+            background-color: rgba(255,255,255,0.05);
+        }
+        #status-msg {
+            font-size: 0.8em;
+            color: #55ff55;
+            margin-left: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
     </style>
 </head>
 <body>
@@ -48,30 +107,66 @@
         <h1>> SISTEMA_INICIALIZADO // Alexander</h1>
         
         <div class="log-entry">
-            <span class="highlight">[INFO]</span> Cargando perfil de desarrollador... Completado.
-        </div>
-        
-        <div class="log-entry">
-            Identidad: Arquitecto de Sistemas & Scripter en Roblox.<br>
-            Especialidad: Lógica Back-end, bases de datos (DataStores), y sincronización de UI.
+            <span class="highlight">[IDENTIDAD]</span> Arquitecto de Sistemas & Scripter en Roblox.<br>
+            <span class="highlight">[ENFOQUE]</span> Lógica Back-end, bases de datos (DataStores), sincronización de UI y prevención de anomalías de memoria.
         </div>
 
         <div class="log-entry">
-            <span class="highlight">[PROYECTOS_RECIENTES]</span><br>
-            - <a href="#">Módulo de Inventario Global</a><br>
-            - <a href="#">Sincronización de Animaciones 3D / Low-poly</a><br>
-            - <a href="#">Framework de Combate</a>
+            <span class="highlight">[REGISTROS_VISUALES]</span> Procesando bases de datos de proyectos...
+            
+            <div class="visual-nodes-container">
+                <!-- Nodo Visual 1 -->
+                <div class="visual-node">
+                    <!-- REEMPLAZA EL SRC CON EL ENLACE A TU GIF/IMAGEN -->
+                    <img src="https://via.placeholder.com/300x150/111111/555555?text=GIF+Inventario" alt="Sistema de Inventario">
+                    <div class="node-title">Sistema de Inventario</div>
+                    <div class="node-desc">Módulo escalable con guardado en DataStore.</div>
+                </div>
+                
+                <!-- Nodo Visual 2 -->
+                <div class="visual-node">
+                    <!-- REEMPLAZA EL SRC CON EL ENLACE A TU GIF/IMAGEN -->
+                    <img src="https://via.placeholder.com/300x150/111111/555555?text=GIF+Combate" alt="Framework de Combate">
+                    <div class="node-title">Sincronización 3D</div>
+                    <div class="node-desc">Integración de animaciones y hitboxes precisos.</div>
+                </div>
+
+                <!-- Nodo Visual 3 -->
+                <div class="visual-node">
+                    <!-- REEMPLAZA EL SRC CON EL ENLACE A TU GIF/IMAGEN -->
+                    <img src="https://via.placeholder.com/300x150/111111/555555?text=GIF+Interfaz" alt="UI Scripting">
+                    <div class="node-title">Interfaces Reactivas</div>
+                    <div class="node-desc">Comunicación limpia entre Cliente y Servidor.</div>
+                </div>
+            </div>
         </div>
 
         <div class="log-entry">
-            <span class="highlight">[ESTADO]</span> Buscando nuevos nodos orgánicos para colaboración.<br>
-            Contacto: <a href="mailto:tu-correo@ejemplo.com">Iniciar_Conexion()</a>
+            <span class="highlight">[PROTOCOLO_DE_CONEXIÓN]</span><br>
+            Para iniciar transferencia de datos, copia mi identificador en Discord:<br><br>
+            <button class="contact-btn" onclick="copyDiscord()">Copiar ID de Discord</button>
+            <span id="status-msg">Identificador copiado al portapapeles.</span>
         </div>
         
-        <div class="log-entry" style="margin-top: 30px; font-size: 0.8em; color: #444;">
-            >_ Let's all love The Wired.
+        <div class="log-entry" style="margin-top: 40px; font-size: 0.8em; color: #444; border-top: 1px solid #222; padding-top: 10px;">
+            >_ Let's all love The Wired. // Conexión estable.
         </div>
     </div>
 
+    <script>
+        function copyDiscord() {
+            // REEMPLAZA "TuUsuarioDiscord#1234" CON TU ID REAL
+            const discordID = "TuUsuarioDiscord#1234"; 
+            navigator.clipboard.writeText(discordID).then(() => {
+                const statusMsg = document.getElementById('status-msg');
+                statusMsg.style.opacity = '1';
+                setTimeout(() => {
+                    statusMsg.style.opacity = '0';
+                }, 3000); // El mensaje desaparece después de 3 segundos
+            }).catch(err => {
+                console.error('Error al compilar el copiado: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
